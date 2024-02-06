@@ -4,10 +4,8 @@ const user = {
     age: 24
 }
 
-const newUser = {
-    firstName: "Boris",
-    age: 24
-}
+user["firstName"] = user["name"]
+delete user["name"]
 
 // переделайте объект таким образом, чтобы у него было 2 ключа: firstName и age
 
