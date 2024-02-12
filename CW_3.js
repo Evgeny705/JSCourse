@@ -1,4 +1,7 @@
 function getTimeOfDay (currentHour){
+    
+    if (currentHour < 0 || currentHour > 23){return 'incorrect value'}
+
     const nightHours = [0, 1, 2, 3, 4, 5]
     const morningHours = [6, 7, 8, 9, 10, 11]
     const dayHoyrs = [12, 13, 14, 15, 16, 17]
@@ -26,4 +29,22 @@ function isContain(array, value){
         } 
     });
     return false
+}
+
+function testCycles(){
+
+    for (i = 1; i <= 10; i++){print(i + ' ')}
+
+    for (i = 1; i <= 10; i++) {
+        if (i == 7) {break}
+        print(i + ' ')
+    }
+
+    i = 0
+    while (i <= 20){
+        if (i % 2 != 0){continue}
+        if (i % 5 == 0){continue}
+        print(i + ' ')
+        i++
+    }
 }
