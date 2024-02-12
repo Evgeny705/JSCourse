@@ -48,3 +48,17 @@ function testCycles(){
         i++
     }
 }
+
+/*Создать функцию formatPhoneNumber, которая принимает строку, представляющую номер телефона, и возвращает отформатированную строку.
+ formatPhoneNumber("1234567890");
+ Вывод: "(123) 456-7890"*/
+
+ function formatPhoneNumber(inputNumber) {
+    
+    code = inputNumber.slice(0, 3)
+    firstPart = inputNumber.slice(3, 6)
+    lastPart = inputNumber.slice(6)
+    
+    console.log( '(' + code + ') ' + firstPart + '-' + lastPart)
+ }
+ formatPhoneNumber("1234567890")
