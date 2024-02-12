@@ -33,18 +33,18 @@ function isContain(array, value){
 
 function testCycles(){
 
-    for (i = 1; i <= 10; i++){print(i + ' ')}
+    for (i = 1; i <= 10; i++){console.log(i + ' ')}
 
     for (i = 1; i <= 10; i++) {
         if (i == 7) {break}
-        print(i + ' ')
+        console.log(i + ' ')
     }
 
     i = 0
     while (i <= 20){
         if (i % 2 != 0){continue}
         if (i % 5 == 0){continue}
-        print(i + ' ')
+        console.log(i + ' ')
         i++
     }
 }
