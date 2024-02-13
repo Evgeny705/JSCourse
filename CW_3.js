@@ -53,8 +53,13 @@ function testCycles(){
  formatPhoneNumber("1234567890");
  Вывод: "(123) 456-7890"*/
 
- function formatPhoneNumber(inputNumber) {
+function formatPhoneNumber(inputNumber) {
     
+    if (isNaN(inputNumber)){
+        console.log("incorrect data")
+        return
+    }
+
     code = inputNumber.slice(0, 3)
     firstPart = inputNumber.slice(3, 6)
     lastPart = inputNumber.slice(6)
