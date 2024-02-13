@@ -185,5 +185,5 @@ function decodeString(s, key){
 
 }
 
-console.log(encodeString("Hello, World!", 5))
-console.log(decodeString("Mjqqt1%\\twqi&", 5))
+// console.log(encodeString("Hello, World!", 5))
+// console.log(decodeString("Mjqqt1%\\twqi&", 5))
