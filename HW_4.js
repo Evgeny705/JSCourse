@@ -6,13 +6,13 @@ f("tenet") // true
 f("tenet!") // true
 */
 function checkIsPalindrom(inputString) {
-  let OnlyLetterslowerCaseString = inputString
+  let onlyLettersLowerCaseString = inputString
     .toLowerCase()
     .replace(/[^a-z]/g, "");
 
   return (
-    OnlyLetterslowerCaseString ==
-    OnlyLetterslowerCaseString.split("").reverse().join("")
+    onlyLettersLowerCaseString ==
+    onlyLettersLowerCaseString.split("").reverse().join("")
   );
 }
 
