@@ -5,44 +5,47 @@
 f("tenet") // true
 f("tenet!") // true
 */
-function palindrom(inputString){
-    
-    let myString = inputString.toLowerCase().replace(/[^a-z]/g, "")
-    
-    return myString == myString.split("").reverse().join("")
+function checkIsPalindrom(inputString) {
+  let OnlyLetterslowerCaseString = inputString
+    .toLowerCase()
+    .replace(/[^a-z]/g, "");
+
+  return (
+    OnlyLetterslowerCaseString ==
+    OnlyLetterslowerCaseString.split("").reverse().join("")
+  );
 }
 
-// console.log(palindrom("tenet!"))
+// console.log(checkIsPalindrom("tenet!"))
 
 /*
 2. Напишите функцию, принимающую строку и возвращающую самое длинное слово в строке
 f('Web Development Tutorial'); // "Development"
 */
-function longestWord(inputString){
-    
-    let arrayOfString = inputString.split(" ")
+function findLongestWord(inputString) {
+  const arrayOfString = inputString.split(" ");
 
-    let maxLength = 0
-    let result = ""
+  let maxLength = 0;
+  let result = "";
 
-    arrayOfString.forEach(element => {
-        if (element.length > maxLength){
-            maxLength = element.length
-            result = element.toString()
-        }
-    })
+  arrayOfString.forEach((element) => {
+    if (element.length > maxLength) {
+      maxLength = element.length;
+      result = element.toString();
+    }
+  });
 
-    return result
+  return result;
 }
 
-// console.log("Longest word is: " + longestWord('Web Development Tutorial'))
+// console.log("Longest word is: " + findLongestWord('Web Development Tutorial'))
 
 /*
 3. Напишите функцию, принимающую аргумент в виде строки и которая расставляет все буквы строки в алфавитном порядке. Возвращает новую строку с буквами в алфавитном порядке
 f("alphabetical"); // "aaabcehillpt"
 */
 function sortCharsByAlphabeth(inputString) {
-    return inputString.split("").sort().join("")
+  return inputString.split("").sort().join("");
 }
 
 // console.log(sortCharsByAlphabeth("alphabetical"))
@@ -51,15 +54,17 @@ function sortCharsByAlphabeth(inputString) {
 4. Напишите функцию JavaScript, которая принимает строку и возвращает индекс первого неповторяющегося символа. 
 f('фывфавыапрс'); // 8
 */
-function findFirstUniqueSymbol(inputString){
-
-    for (i = 0; i < inputString.length; i++){
-        if (inputString.indexOf(inputString[i]) === inputString.lastIndexOf(inputString[i])){
-            return i
-        }
+function findFirstUniqueSymbol(inputString) {
+  for (i = 0; i < inputString.length; i++) {
+    if (
+      inputString.indexOf(inputString[i]) ===
+      inputString.lastIndexOf(inputString[i])
+    ) {
+      return i;
     }
+  }
 
-    return -1
+  return -1;
 }
 
 // console.log(findFirstUniqueSymbol("aabbccfdd"))
@@ -69,19 +74,17 @@ function findFirstUniqueSymbol(inputString){
 f('Web Development Tutorial')); //9
 */
 
-function countVowel(inputString){
+function getCountVowel(inputString) {
+  const onlyVowels = "aeiouy";
+  let result = 0;
 
-    const onlyVowels = "aeiouy"
-    let result = 0
-
-    for (i = 0; i < inputString.length; i++){
-        if (onlyVowels.indexOf(inputString[i]) >= 0){
-            result++
-        }
+  for (i = 0; i < inputString.length; i++) {
+    if (onlyVowels.indexOf(inputString[i]) >= 0) {
+      result++;
     }
+  }
 
-    return result
-
+  return result;
 }
 
-// console.log(countVowel("Web Development Tutorial"))
+// console.log(getCountVowel("Web Development Tutorial"))
