@@ -6,7 +6,7 @@ f("tenet") // true
 f("tenet!") // true
 */
 function checkIsPalindrom(inputString) {
-  let onlyLettersLowerCaseString = inputString
+  const onlyLettersLowerCaseString = inputString
     .toLowerCase()
     .replace(/[^a-z]/g, "");
 
