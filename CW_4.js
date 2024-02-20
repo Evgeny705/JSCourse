@@ -13,7 +13,7 @@ const person = {
   houseNum: 52,
 };
 
-function getAvarageFromObject(person) {
+function printAvarageFromObject(person) {
   let countElements = 0;
   let sumElements = 0;
   for (let element in person) {
@@ -26,7 +26,7 @@ function getAvarageFromObject(person) {
   console.log(sumElements / countElements);
 }
 
-// getAvarageFromObject(person);
+printAvarageFromObject(person);
 
 /*
   Напишите кастомный Object.assign,
@@ -44,10 +44,10 @@ function customAssign(target, source) {
   return target;
 }
 
-// const target = { a: 1, b: 2 };
-// const source = { b: 4, c: 5 };
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
 
-// console.log(customAssign(target, source));
+console.log(customAssign(target, source));
 
 /*
   //TODO: максимально часто встречающаяся задача на фронте
@@ -103,6 +103,6 @@ function addLeadingZero(value) {
   }
 }
 
-// const currentDate = new Date();
-// const formattedDate = formatDate(currentDate);
-// console.log(formattedDate);
+const currentDate = new Date();
+const formattedDate = formatDate(currentDate);
+console.log(formattedDate);

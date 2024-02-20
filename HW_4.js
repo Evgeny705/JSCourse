@@ -16,6 +16,7 @@ const students = [
 2. Отсортируйте студентов по среднему баллу в убывающем порядке.
 3. Используя метод массива, создайте новый массив `topStudents`, содержащий 3 студентов с самыми высокими средними баллами.
 */
+console.log("Task 1");
 const students = [
   { name: "Alice", grades: [85, 90, 92] },
   { name: "Bob", grades: [78, 80, 75] },
@@ -32,18 +33,18 @@ for (const student of students) {
 }
 
 students.sort((s1, s2) => s2.averageGrade - s1.averageGrade);
-// console.log("");
-// console.log('Вывод студентов отсортированных по полю "avarageGrade"');
-// for (const student of students) {
-//   console.log(student);
-// }
+console.log("");
+console.log('Вывод студентов отсортированных по полю "avarageGrade"');
+for (const student of students) {
+  console.log(student);
+}
 
 const topStudents = students.slice(0, 3);
-// console.log("");
-// console.log("Вывод лучших студентов");
-// for (const student of topStudents) {
-//   console.log(student);
-// }
+console.log("");
+console.log("Вывод лучших студентов");
+for (const student of topStudents) {
+  console.log(student);
+}
 
 //2
 /*
@@ -54,6 +55,10 @@ const topStudents = students.slice(0, 3);
 
 Условие: нельзя использовать find и push, любые другие методы можно
 */
+
+console.log("");
+console.log("Task 2");
+
 Array.prototype.findAndPush = function (searchElement) {
   for (i = 0; i < this.length; i++) {
     if (searchElement == this[i]) {
@@ -71,8 +76,8 @@ const myArray = [1, 2, 3, 4, 5];
 
 const result = myArray.findAndPush(3);
 
-// console.log(result); // true, так как 3 был найден и перемещен
-// console.log(myArray); // [1, 2, 4, 5, 3]
+console.log(result); // true, так как 3 был найден и перемещен
+console.log(myArray); // [1, 2, 4, 5, 3]
 
 //3
 /*Создайте функцию, которая принимает две даты в формате объекта `Date`
@@ -82,6 +87,8 @@ const result = myArray.findAndPush(3);
     - Используйте методы объекта `Date` для получения разных компонент времени (год, месяц, день, час, минута, секунда).
     - Учтите, что разница в месяцах может быть нецелым числом, поэтому нужно корректно обработать этот случай.
 */
+console.log("");
+console.log("Task 3");
 
 function dateDifference(date1, date2) {
   const year1 = date1.getFullYear();
@@ -118,25 +125,25 @@ const startDate = new Date(2023, 0, 1, 12, 0, 0); // 1 января 2023 год�
 const endDate = new Date(2024, 5, 15, 18, 30, 45); // 15 июня 2024 года, 18:30:45
 
 const difference = dateDifference(startDate, endDate);
-// console.log(
-//   "years: " +
-//     difference.years +
-//     ",\n" +
-//     "month: " +
-//     difference.month +
-//     ",\n" +
-//     "days: " +
-//     difference.days +
-//     ",\n" +
-//     "hours: " +
-//     difference.hours +
-//     ",\n" +
-//     "minutes: " +
-//     difference.minutes +
-//     ",\n" +
-//     "seconds: " +
-//     difference.seconds
-// );
+console.log(
+  "years: " +
+    difference.years +
+    ",\n" +
+    "month: " +
+    difference.month +
+    ",\n" +
+    "days: " +
+    difference.days +
+    ",\n" +
+    "hours: " +
+    difference.hours +
+    ",\n" +
+    "minutes: " +
+    difference.minutes +
+    ",\n" +
+    "seconds: " +
+    difference.seconds
+);
 
 //{
 //  years: 1,
@@ -155,6 +162,9 @@ const difference = dateDifference(startDate, endDate);
 - Используйте деструктуризацию для извлечения данных из объекта студента.
 - Можете использовать шаблонные строки для формирования вывода.
  */
+console.log("");
+console.log("Task 4");
+
 function printStudentInfo(student) {
   const {
     name: name,
@@ -194,7 +204,7 @@ const student = {
   hobbies: ["reading", "traveling"],
 };
 
-// console.log(printStudentInfo(student));
+console.log(printStudentInfo(student));
 
 // Вывод должен быть в формате:
 // "Student: Alice, Age: 20, Grade: A, City: New York, Zip: 10001, Hobbies: reading, traveling"
@@ -223,6 +233,8 @@ const user = {
 Внимание, задача: создать новый объект newUser (программно), чтобы на выходе получилось следующее:
 
 */
+console.log("");
+console.log("Task 5");
 
 const user = {
   name: "Boris",
@@ -232,4 +244,4 @@ const user = {
 const { name: firstName, age } = user;
 const newUser = { firstName, age };
 
-// console.log(newUser); // {firstName: "Boris", age: 24}
+console.log(newUser); // {firstName: "Boris", age: 24}
