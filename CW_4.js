@@ -69,28 +69,43 @@ console.log(customAssign(target, source));
   Подсказка: Месяцы начинаются с нуля
   */
 function formatDate(inputDate) {
-  const year = inputDate.getFullYear();
-  const month = inputDate.getMonth() + 1;
-  const date = inputDate.getDate();
-  const hours = inputDate.getHours();
-  const minutes = inputDate.getMinutes();
-  const seconds = inputDate.getSeconds();
+  //   const year = inputDate.getFullYear();
+  //   const month = inputDate.getMonth() + 1;
+  //   const date = inputDate.getDate();
+  //   const hours = inputDate.getHours();
+  //   const minutes = inputDate.getMinutes();
+  //   const seconds = inputDate.getSeconds();
+  //   let result = "";
 
-  const leadingZero = "0";
+  //   result += addLeadingZero(date) + ".";
+
+  //   result += addLeadingZero(month) + ".";
+
+  //   result += year + ", ";
+
+  //   result += addLeadingZero(hours) + ":";
+
+  //   result += addLeadingZero(minutes) + ":";
+
+  //   result += addLeadingZero(seconds);
+
+  const dateObject = {
+    year: inputDate.getFullYear(),
+    month: inputDate.getMonth() + 1,
+    date: inputDate.getDate(),
+    hours: inputDate.getHours(),
+    minutes: inputDate.getMinutes(),
+    seconds: inputDate.getSeconds(),
+  };
 
   let result = "";
+  step = 0;
+  separators = [".", ".", ", ", ":", ":", ""];
 
-  result += addLeadingZero(date) + ".";
-
-  result += addLeadingZero(month) + ".";
-
-  result += year + ", ";
-
-  result += addLeadingZero(hours) + ":";
-
-  result += addLeadingZero(minutes) + ":";
-
-  result += addLeadingZero(seconds);
+  for (key in dateObject) {
+    result += addLeadingZero(dateObject[key]) + separators[step];
+    step++;
+  }
 
   return result;
 }
