@@ -38,8 +38,10 @@ type UserName = Pick<UserData, "name">; // <--------- создайте тип, �
  }
 
 */
-function mergeObjects(obj1: object, obj2: object): object {
-  return { ...obj1, ...obj2 };
+function mergeObjects<T, U>(o1: T, o2: U): T & U {
+  let result: T & U = {} as T & U;
+  result = { ...o1, ...o2 };
+  return result;
 }
 
 const obj1 = { name: "John", age: 30 };
