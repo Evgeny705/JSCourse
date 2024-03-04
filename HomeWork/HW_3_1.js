@@ -77,6 +77,7 @@ f('Web Development Tutorial')); //9
 function getCountVowel(inputString) {
   const onlyVowels = "aeiouy";
   let result = 0;
+  Math.round;
 
   for (i = 0; i < inputString.length; i++) {
     if (onlyVowels.indexOf(inputString[i]) >= 0) {
