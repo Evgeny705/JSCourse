@@ -241,6 +241,15 @@
 @media screen and (max-width: 900px) {
   .test {
     grid-gap: 0;
+    align-content: center;
+  }
+  .slider_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .slider_track {
+    width: auto;
   }
   .img {
     width: 59.2vw;
@@ -250,8 +259,10 @@
     display: block;
   }
   .wrapper {
-    width: 59.2vw;
     margin-top: 40px;
+  }
+  .media_display_none {
+    display: none;
   }
   .main_promo {
     height: 80.6vw;
