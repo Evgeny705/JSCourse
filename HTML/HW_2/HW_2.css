@@ -82,7 +82,7 @@
     width: 100%;
     padding-right: 15px;
     padding-top: 35px;
-    column-gap: 3.4vw;
+    column-gap: 5vw;
   }
 
   .header_nav {
@@ -96,6 +96,7 @@
     padding-top: 40px;
     padding-left: 10px;
     font-size: 4vw;
+    letter-spacing: 0.2px;
   }
 }
 
@@ -271,9 +272,9 @@
     width: 75vw;
     height: 28vw;
     margin-top: 30.2vw;
-    padding-top: 6vw;
+    padding-top: 5vw;
     font-size: 5vw;
-    line-height: 6vw;
+    line-height: 6.5vw;
   }
   .about_title {
     font-size: 5vw;
@@ -290,6 +291,9 @@
   .slider_item {
     width: 2vw;
     height: 2vw;
+  }
+  .main_container_about {
+    padding-top: 10px;
   }
 }
 
