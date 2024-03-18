@@ -137,6 +137,27 @@
           </div>
         </div>
       </div>
+      <div class="module_work">
+        <h3 class="mw_h3">Favorites</h3>
+        <br />
+        <div class="mw_discription">Pick favorites of season</div>
+        <br />
+        <div class="radio_container">
+          <input type="radio" id="radio1" name="radios" value="1" checked />
+          <label for="radio1">Winter</label>
+
+          <input type="radio" id="radio2" name="radios" value="2" />
+          <label for="radio2">Spring</label>
+
+          <input type="radio" id="radio3" name="radios" value="3" />
+          <label for="radio3">Summer</label>
+
+          <input type="radio" id="radio4" name="radios" value="4" />
+          <label for="radio4">Autumn</label>
+        </div>
+        <br />
+        <div class="book_container"></div>
+      </div>
     </main>
 
     <footer class="footer">
@@ -227,5 +248,195 @@
         </ul>
       </div>
     </div>
+
+    <script>
+      const seasonContainer = document.querySelector(".book_container");
+
+      class Book {
+        constructor(season, author, title, description, image) {
+          this.season = season;
+          this.author = author;
+          this.title = title;
+          this.description = description;
+          this.image = image;
+        }
+      }
+
+      const winterBooks = [
+        new Book(
+          "winter",
+          "Staff Picks",
+          "The Book Eaters",
+          "An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.",
+          "img/1.png"
+        ),
+        new Book(
+          "winter",
+          "Rachel Harrison",
+          "Cackle",
+          "Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.",
+          "img/2.png"
+        ),
+        new Book(
+          "winter",
+          "Erich Auerbach",
+          "Dante: Poet of the Secular World",
+          "Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.",
+          "img/3.png"
+        ),
+        new Book(
+          "winter",
+          "Clive Irving",
+          "The Last Queen",
+          "A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.",
+          "img/4.png"
+        ),
+      ];
+
+      const springBooks = [
+        new Book(
+          "spring",
+          "Stephen King spring",
+          "The Body spring",
+          "spring! Powerful novel that takes you back to a nostalgic time, exploring both the beauty and danger and loss of innocence that is youth.",
+          "img/5.png"
+        ),
+        new Book(
+          "spring",
+          "Rachel Harrison spring",
+          "Cackle spring",
+          "spring! Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.",
+          "img/6.png"
+        ),
+        new Book(
+          "spring",
+          "spring! Erich Auerbach spring",
+          "spring! Dante: Poet of the Secular World",
+          "spring! Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.",
+          "img/7.png"
+        ),
+        new Book(
+          "spring",
+          "spring! Clive Irving",
+          "spring! The Last Queen",
+          "spring! A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.",
+          "img/8.png"
+        ),
+      ];
+
+      const summerBooks = [
+        new Book(
+          "summer",
+          "summer! Staff Picks",
+          "summer! The Book Eaters",
+          "summer! An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.",
+          "img/9.png"
+        ),
+        new Book(
+          "summer",
+          "summer! Rachel Harrison",
+          "summer! Cackle",
+          "summer! Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.",
+          "img/10.png"
+        ),
+        new Book(
+          "summer",
+          "summer! Erich Auerbach",
+          "summer! Dante: Poet of the Secular World",
+          "summer! Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.",
+          "img/11.png"
+        ),
+        new Book(
+          "summer",
+          "summer! Clive Irving",
+          "summer! The Last Queen",
+          "summer! A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.",
+          "img/12.png"
+        ),
+      ];
+
+      const autumnBooks = [
+        new Book(
+          "autumn",
+          "autumn! Staff Picks",
+          "autumn! The Book Eaters",
+          "autumn! An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.",
+          "img/13.png"
+        ),
+        new Book(
+          "autumn",
+          "autumn! Rachel Harrison",
+          "autumn! Cackle",
+          "autumn! Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.",
+          "img/14.png"
+        ),
+        new Book(
+          "autumn",
+          "autumn! Erich Auerbach",
+          "autumn! Dante: Poet of the Secular World",
+          "autumn! Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.",
+          "img/15.png"
+        ),
+        new Book(
+          "autumn",
+          "autumn! Clive Irving",
+          "autumn! The Last Queen",
+          "autumn! A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.",
+          "img/16.png"
+        ),
+      ];
+
+      function addBooksToContainer(books) {
+        books.forEach((book) => {
+          const bookElement = document.createElement("div");
+          bookElement.classList.add("book");
+
+          const titleElement = document.createElement("h3");
+          titleElement.textContent = book.title;
+
+          const authorElement = document.createElement("p");
+          authorElement.textContent = "By " + book.author;
+
+          const descriptionElement = document.createElement("p");
+          descriptionElement.textContent = book.description;
+
+          const imgElement = document.createElement("img");
+          imgElement.src = book.image;
+          imgElement.alt = "book";
+
+          bookElement.appendChild(titleElement);
+          bookElement.appendChild(authorElement);
+          bookElement.appendChild(descriptionElement);
+          bookElement.appendChild(imgElement);
+
+          seasonContainer.appendChild(bookElement);
+        });
+      }
+
+      addBooksToContainer(winterBooks);
+
+      const radioButtons = document.querySelectorAll('input[type="radio"]');
+      console.log(radioButtons);
+
+      radioButtons.forEach((radioButton) => {
+        radioButton.addEventListener("change", (event) => {
+          console.log(event);
+          const selectedRadioButton = event.target;
+          if (selectedRadioButton.value == "1") {
+            seasonContainer.innerHTML = "";
+            addBooksToContainer(winterBooks);
+          } else if (selectedRadioButton.value == "2") {
+            seasonContainer.innerHTML = "";
+            addBooksToContainer(springBooks);
+          } else if (selectedRadioButton.value == "3") {
+            seasonContainer.innerHTML = "";
+            addBooksToContainer(summerBooks);
+          } else if (selectedRadioButton.value == "4") {
+            seasonContainer.innerHTML = "";
+            addBooksToContainer(autumnBooks);
+          }
+        });
+      });
+    </script>
   </body>
 </html>
